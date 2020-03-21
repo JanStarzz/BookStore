@@ -31,14 +31,14 @@
 				<td>详情</td>
 			</tr>		
 			<tr>
-				<td>2015.04.23</td>
+				<td>2020.04.23</td>
 				<td>90.00</td>
 				<td>未发货</td>
 				<td><a href="#">查看详情</a></td>
 			</tr>	
 			
 			<tr>
-				<td>2015.04.20</td>
+				<td>2020.04.20</td>
 				<td>20.00</td>
 				<td>已发货</td>
 				<td><a href="#">查看详情</a></td>
@@ -57,7 +57,7 @@
 	
 	<div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2015
+			尚硅谷书城.Copyright &copy;2020
 		</span>
 	</div>
 </body>

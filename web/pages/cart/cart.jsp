@@ -37,7 +37,7 @@
 <body>
 	
 	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/log.jpg" >
+			<img class="logo_img" alt="" src="static/img/logo.jpg" style="height: 60px;width: 60px">
 			<span class="wel_word">购物车</span>
 			<%@include file="/include/user-info.jsp" %>
 	</div>
@@ -65,7 +65,7 @@
 				</td>
 				<td>${item.book.price }</td>
 				<td>${item.totalPrice }</td>
-				<td><a class="delBtn" href="client/CartServlet?method=delete&id=${ item.book.id }">删除</a></td>
+				<td><a class="delBtn" href="CartServlet?method=delete&id=${ item.book.id }">删除</a></td>
 			</tr>	
 			</c:forEach>	
 			
@@ -73,8 +73,8 @@
 		<div class="cart_info">
 			<span class="cart_span">购物车中共有<span class="b_count">${cart.totalCount }</span>件商品</span>
 			<span class="cart_span">总金额<span class="b_price">${cart.totalMoney }</span>元</span>
-			<span class="cart_span"><a id="clearBtn" href="client/CartServlet?method=clear">清空购物车</a></span>
-			<span class="cart_span"><a href="checkout.html">去结账</a></span>
+			<span class="cart_span"><a id="clearBtn" href="CartServlet?method=clear">清空购物车</a></span>
+			<span class="cart_span"><a href="checkout.jsp">去结账</a></span>
 		</div>
 		</c:if>
 		
@@ -85,7 +85,7 @@
 	
 	<div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2015
+			洞洞书城.Copyright &copy;2020
 		</span>
 	</div>
 </body>

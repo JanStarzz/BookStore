@@ -1,9 +1,12 @@
 package com.study.bean;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+
 /**
  * 每个购物项
  */
-public class CartItem {
+public class CartItem implements Serializable {
     //代表哪本书
     private Book book;
     //书的数量
@@ -51,7 +54,10 @@ public class CartItem {
      */
 
     public double getTotalPrice() {
-        return getBook().getPrice()*getCount();
+        BigDecimal price = new BigDecimal(String.valueOf(getBook().getPrice()));
+        BigDecimal count = new BigDecimal(String.valueOf(getCount()));
+
+        return price.multiply(count).doubleValue();
     }
 
     public void setTotalPrice(double totalPrice) {

@@ -1,5 +1,7 @@
 package com.study.bean;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.Map;
 /**
  * 购物车，保存每个购物项的信息，还封装了对购物车操作的方法
  */
-public class Cart {
+public class Cart implements Serializable {
     /**
      * 保存所有的购物项
      */
@@ -98,12 +100,13 @@ public class Cart {
      */
     public double getTotalMoney() {
         List<CartItem> list = getAllItems();
-        double money = 0;
+        BigDecimal money = new BigDecimal(String.valueOf(0.0));
         for (CartItem cartItem: list
         ) {
-            money += cartItem.getTotalPrice();
+            BigDecimal totalPrice = new BigDecimal(String.valueOf(cartItem.getTotalPrice()));
+            money = money.add(totalPrice);
         }
-        return money;
+        return money.doubleValue();
     }
 
 

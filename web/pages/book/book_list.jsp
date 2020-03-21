@@ -25,10 +25,19 @@
             </form>
         </div>
         <div style="text-align: center">
-            <span>您的购物车中有3件商品</span>
-            <div>
-                您刚刚将<span style="color: red">时间简史</span>加入到了购物车中
-            </div>
+            <span>您的购物车中有
+                <c:out value="${cart.totalCount}" default="0"></c:out>
+                件商品</span>
+            <c:if test="${!empty title}">
+                <div>
+                    您刚刚将<span style="color: red">
+                        ${title }
+                </span>加入到了购物车中
+                </div>
+            </c:if>
+            <c:if test="${empty title}">
+                <span> </span>
+            </c:if>
         </div>
         <c:forEach items="${page.list}" var="book">
             <div class="b_list">
@@ -57,7 +66,7 @@
                         <span class="sp2">${book.stock}</span>
                     </div>
                     <div class="book_add">
-                        <button>加入购物车</button>
+                        <a href="CartServlet?method=add&id=${book.id}">加入购物车</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +82,7 @@
 
 <div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2015
+			尚硅谷书城.Copyright &copy;2020
 		</span>
 </div>
 </body>
