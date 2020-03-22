@@ -16,6 +16,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * @author 17672
+ */
 @WebServlet(name = "UserServlet",urlPatterns = "/UserServlet")
 public class UserServlet extends BaseServlet {
 	/**
