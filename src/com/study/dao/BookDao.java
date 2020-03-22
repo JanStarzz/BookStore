@@ -4,6 +4,9 @@ import com.study.bean.Book;
 
 import java.util.List;
 
+/**
+ * @author 17672
+ */
 public interface BookDao {
     /**
      * 获取所有图书
@@ -55,11 +58,28 @@ public interface BookDao {
 
     /**
      * 按价格区间查找
+     * @param min
+     * @param max
+     * @return
      */
     int getCountByPrice(double min, double max);
+
     /**
      * 带条件查找
+     * @param index
+     * @param size
+     * @param min
+     * @param max
+     * @return
      */
 
     List<Book> getPageByPrice(int index,int size, double min, double max);
+
+    /**
+     *
+     * @param bookId
+     * @param stock
+     * @param sales
+     */
+    //public void updateStockAndSales(Integer bookId,Integer stock,Integer sales);
 }
