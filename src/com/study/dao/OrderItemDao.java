@@ -23,4 +23,11 @@ public interface OrderItemDao {
      * @return
      */
     public int saveOrderItem(OrderItem item);
+
+    /**
+     * 批量保存
+     * @param params
+     * @return
+     */
+    public int saveBatch(List<OrderItem> params);
 }

@@ -82,7 +82,7 @@
 
 <div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2020
+			洞洞书城.Copyright &copy;2020
 		</span>
 </div>
 </body>

@@ -20,9 +20,7 @@ public class OrderItemServiceImpl implements OrderItemService {
      */
     @Override
     public void saveItem(List<OrderItem> orderItem) {
-        for (OrderItem orderItem1:orderItem){
-            itemDao.saveOrderItem(orderItem1);
-        }
+        itemDao.saveBatch(orderItem);
     }
 
     /**

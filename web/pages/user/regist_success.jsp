@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>尚硅谷会员注册页面</title>
+<title>洞洞会员注册页面</title>
 <%@include file="/include/base.jsp" %>
 <style type="text/css">
 	h1 {
@@ -19,7 +19,7 @@
 </head>
 <body>
 		<div id="header">
-				<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+				<img class="logo_img" alt="" src="static/img/logo.jpg" style="height: 60px;width: 60px">
 				<span class="wel_word"></span>
 				<%@include file="/include/user-info.jsp" %>
 		</div>

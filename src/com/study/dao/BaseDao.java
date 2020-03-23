@@ -94,4 +94,19 @@ public class BaseDao<T> {
         return query;
     }
 
+    /**
+     * 批处理
+     * @return
+     */
+    public int batch(String sql,Object[][] params){
+        Connection connection = JDBCUtils.getConnection();
+        try {
+            runner.batch(connection, sql,params);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            JDBCUtils.releaseConnection(connection);
+        }
+        return 0;
+    }
 }

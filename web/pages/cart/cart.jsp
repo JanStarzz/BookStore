@@ -74,7 +74,7 @@
 			<span class="cart_span">购物车中共有<span class="b_count">${cart.totalCount }</span>件商品</span>
 			<span class="cart_span">总金额<span class="b_price">${cart.totalMoney }</span>元</span>
 			<span class="cart_span"><a id="clearBtn" href="CartServlet?method=clear">清空购物车</a></span>
-			<span class="cart_span"><a href="pages/cart/checkout.jsp">去结账</a></span>
+			<span class="cart_span"><a href="OrderServlet?method=checkout">去结账</a></span>
 		</div>
 		</c:if>
 		

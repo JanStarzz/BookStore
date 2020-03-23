@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>尚硅谷会员注册页面</title>
+<title>洞洞会员注册页面</title>
 <%@include file="/include/base.jsp" %>
 <style type="text/css">
 .login_form {
@@ -98,7 +98,7 @@
 					<div class="login_form">
 						<div class="login_box">
 							<div class="tit">
-								<h1>注册尚硅谷会员</h1>
+								<h1>注册洞洞会员</h1>
 								<span class="errorMsg">
 									${msg==null?"用户已存在":msg}
 								</span>

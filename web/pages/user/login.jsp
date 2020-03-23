@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>尚硅谷会员登录页面</title>
+<title>洞洞会员登录页面</title>
 <%@include file="/include/base.jsp" %>
 </head>
 <body>
@@ -23,7 +23,7 @@
 					<div class="login_form">
 						<div class="login_box">
 							<div class="tit">
-								<h1>尚硅谷会员</h1>
+								<h1>洞洞会员</h1>
 								<a href="pages/user/regist.jsp">立即注册
 									
 								</a>
@@ -62,7 +62,7 @@
 			</div>
 		<div id="bottom">
 			<span>
-				尚硅谷书城.Copyright &copy;2020
+				洞洞书城.Copyright &copy;2020
 			</span>
 		</div>
 </body>

@@ -29,8 +29,9 @@ public class JDBCUtils {
      */
     public static void releaseConnection(Connection connection){
         try {
-            if(connection!=null)
+            if(connection!=null) {
                 connection = null;
+            }
         }catch (Exception e){
             e.printStackTrace();
         }

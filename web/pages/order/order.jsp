@@ -16,48 +16,58 @@
 <body>
 	
 	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+			<img class="logo_img" alt="" src="static/img/logo.jpg" style="height: 60px;width: 60px">
 			<span class="wel_word">我的订单</span>
 			<%@include file="/include/user-info.jsp" %>
 	</div>
 	
 	<div id="main">
+		<c:if test="${empty orders}">
+			<h1>没有对应的订单，<a href="index.jsp">赶紧去购买吧</a></h1>
+		</c:if>
 
-		<table>
-			<tr>
-				<td>日期</td>
-				<td>金额</td>
-				<td>状态</td>
-				<td>详情</td>
-			</tr>		
-			<tr>
-				<td>2020.04.23</td>
-				<td>90.00</td>
-				<td>未发货</td>
-				<td><a href="#">查看详情</a></td>
-			</tr>	
-			
-			<tr>
-				<td>2020.04.20</td>
-				<td>20.00</td>
-				<td>已发货</td>
-				<td><a href="#">查看详情</a></td>
-			</tr>	
-			
-			<tr>
-				<td>2014.01.23</td>
-				<td>190.00</td>
-				<td>已完成</td>
-				<td><a href="#">查看详情</a></td>
-			</tr>		
-		</table>
+		<c:if test="${!empty orders}">
+			<table>
+				<tr>
+					<td>订单号</td>
+					<td>日期</td>
+					<td>金额</td>
+					<td>状态</td>
+					<td>详情</td>
+				</tr>
+				<c:forEach items="${orders}" var="order">
+					<tr>
+						<td>${order.orderId}</td>
+
+						<td>${order.createDate}</td>
+						<td>${order.totalMoney}</td>
+						<td>
+							<c:if test="${order.status==0}">
+								未发货
+							</c:if>
+							<c:if test="${order.status==1}">
+								<a href="OrderServlet?method=received&orderId=${order.orderId}">确认收货</a>
+							</c:if>
+							<c:if test="${order.status==2}">
+								交易完成
+							</c:if>
+						</td>
+						<td><a href="#">查看详情</a></td>
+					</tr>
+				</c:forEach>
+
+
+
+			</table>
+		</c:if>
+
 		
 	
 	</div>
 	
 	<div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2020
+			洞洞书城.Copyright &copy;2020
 		</span>
 	</div>
 </body>

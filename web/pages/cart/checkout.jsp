@@ -23,14 +23,14 @@
 	
 	<div id="main">
 		
-		<h1>你的订单已结算，订单号为2937474382928484747</h1>
+		<h1>你的订单已结算，订单号为${orderId}</h1>
 		
 	
 	</div>
 	
 	<div id="bottom">
 		<span>
-			尚硅谷书城.Copyright &copy;2020
+			洞洞书城.Copyright &copy;2020
 		</span>
 	</div>
 </body>

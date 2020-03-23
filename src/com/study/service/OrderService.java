@@ -2,6 +2,7 @@ package com.study.service;
 
 import com.study.bean.Cart;
 import com.study.bean.Order;
+import com.study.bean.OrderItem;
 import com.study.bean.User;
 
 import java.util.List;
@@ -39,4 +40,5 @@ public interface OrderService {
      * @return
      */
     public List<Order> getMyOrders(Integer user_id);
+
 }

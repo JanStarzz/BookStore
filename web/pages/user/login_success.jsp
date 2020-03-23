@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>尚硅谷会员注册页面</title>
+<title>洞洞会员注册页面</title>
 <%@include file="/include/base.jsp" %>
 <style type="text/css">
 	h1 {
@@ -31,7 +31,7 @@
 		
 		<div id="bottom">
 			<span>
-				尚硅谷书城.Copyright &copy;2020
+				洞洞书城.Copyright &copy;2020
 			</span>
 		</div>
 </body>

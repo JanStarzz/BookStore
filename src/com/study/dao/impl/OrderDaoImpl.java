@@ -47,7 +47,7 @@ public class OrderDaoImpl extends BaseDao<Order> implements OrderDao {
     @Override
     public List<Order> getOrderList() {
         String sql = "select order_id orderId,create_date createDate," +
-                "total_money totalMoney,status status,user_id userId";
+                "total_money totalMoney,status status,user_id userId from bs_order";
         return getBeanList(sql);
     }
 
@@ -59,7 +59,7 @@ public class OrderDaoImpl extends BaseDao<Order> implements OrderDao {
     @Override
     public List<Order> getOrderByUserId(Integer userId) {
         String sql = "select order_id orderId,create_date createDate," +
-                "total_money totalMoney,status status,user_id userId where user_id = ?";
+                "total_money totalMoney,status status,user_id userId from bs_order where user_id = ?";
         return getBeanList(sql,userId);
     }
 }

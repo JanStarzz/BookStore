@@ -2,7 +2,9 @@ package com.study.service.impl;
 
 import com.study.bean.*;
 import com.study.dao.OrderDao;
+import com.study.dao.OrderItemDao;
 import com.study.dao.impl.OrderDaoImpl;
+import com.study.dao.impl.OrderItemDaoImpl;
 import com.study.service.BookService;
 import com.study.service.OrderItemService;
 import com.study.service.OrderService;
@@ -17,6 +19,7 @@ import java.util.List;
  */
 public class OrderServiceImpl implements OrderService {
     OrderDao orderDao = new OrderDaoImpl();
+    OrderItemDao itemDao = new OrderItemDaoImpl();
     OrderItemService itemService = new OrderItemServiceImpl();
     BookService bookService = new BookServiceImpl();
     /**
@@ -72,6 +75,7 @@ public class OrderServiceImpl implements OrderService {
         Order order =new Order();
         order.setOrderId(orderId);
         int parserInt = Integer.parseInt(status);
+        order.setStatus(parserInt);
         orderDao.updateStatus(order);
     }
 
@@ -95,4 +99,6 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> getMyOrders(Integer user_id) {
         return orderDao.getOrderByUserId(user_id);
     }
+
+
 }

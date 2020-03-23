@@ -61,7 +61,6 @@ public class BookManagerServlet extends BaseServlet {
     protected void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Book book = WebUtils.paramBean(request,new Book());
         String pn = request.getParameter("pn");
-        System.out.println(pn);
         bookService.delete(book);
         response.sendRedirect(request.getContextPath()+"/BookManagerServlet?method=page&pn="+pn);
 

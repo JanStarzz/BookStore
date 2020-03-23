@@ -23,7 +23,7 @@
 </head>
 <body>
 		<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+			<img class="logo_img" alt="" src="static/img/logo.jpg" style="height: 60px;width: 60px">
 			<span class="wel_word">编辑图书</span>
 			<%@include file="/include/book-manager.jsp" %>
 		</div>
